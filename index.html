@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upaya Counseling: Visual Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        h1 {
+            color: #2c5f2d;
+            border-bottom: 4px solid #4a9d4e;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .main-section {
+            background: linear-gradient(135deg, #4a9d4e 0%, #5fb663 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin: 30px 0 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .main-section h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+        }
+        
+        .main-concept {
+            font-size: 1.1em;
+            font-style: italic;
+            opacity: 0.95;
+            margin: 10px 0 0 0;
+        }
+        
+        .content-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            border-left: 5px solid #4a9d4e;
+        }
+        
+        .sub-section {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 18px 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #4a9d4e;
+        }
+        
+        .sub-section h3 {
+            color: #2c5f2d;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #f9a825;
+        }
+        
+        .definition-box strong {
+            color: #f57f17;
+        }
+        
+        .example-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #1976d2;
+        }
+        
+        .example-box strong {
+            color: #0d47a1;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #d32f2f;
+        }
+        
+        .warning-box strong {
+            color: #b71c1c;
+        }
+        
+        .diagram {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .flow-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .flow-box {
+            background: linear-gradient(135deg, #4a9d4e 0%, #5fb663 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+        
+        .arrow {
+            font-size: 2em;
+            color: #4a9d4e;
+            font-weight: bold;
+        }
+        
+        .dialectical-arrow {
+            font-size: 1.5em;
+            color: #4a9d4e;
+        }
+        
+        .grid-diagram {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .grid-item {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4a9d4e;
+        }
+        
+        .grid-item h4 {
+            color: #2c5f2d;
+            margin-top: 0;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 10px 0;
+        }
+        
+        .key-insight {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            padding: 18px 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #8e24aa;
+        }
+        
+        .key-insight strong {
+            color: #6a1b9a;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #4a9d4e 0%, #5fb663 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .implementation-status {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border-left: 4px solid #ff6f00;
+        }
+        
+        .reference-box {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 4px solid #757575;
+        }
+        
+        .core-problem {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 5px solid #d32f2f;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upaya Counseling: A Buddhist-Informed Clinical Framework</h1>
+    
+    <div class="core-problem">
+        <strong>The Clinical Problem:</strong> A therapist working with eating disorders faces a familiar pattern—the client knows restricting food causes harm, can articulate why recovery matters, yet continues restricting anyway. Traditional psychotherapy labels this as "resistance" or "lack of motivation," but what if it's actually <strong>addiction to a self-story</strong>?
+    </div>
+
+    <div class="main-section">
+        <h2>Main Point 1: Framework Definition</h2>
+        <p class="main-concept">Upaya Counseling organizes evidence-based Western psychotherapy within Buddhist philosophical categories</p>
+    </div>
+
+    <div class="content-box">
+        <div class="definition-box">
+            <strong>Core Definition:</strong> The framework reframes the Transtheoretical Model (Prochaska & DiClemente, 1983) as <strong>degrees of self-addiction</strong> in which symptoms represent mistaken beliefs about achieving happiness, thereby requiring progressive liberation rather than symptom management.
+        </div>
+
+        <div class="definition-box">
+            <strong>What "Upaya" Means:</strong> Skillful means in Sanskrit—the Buddhist pedagogical principle in which teachers adapt instruction to students' readiness levels. The framework applies this to clinical work by matching interventions to where clients actually are rather than where therapists want them to be.
+        </div>
+
+        <div class="diagram">
+            <h3 style="color: #2c5f2d; margin-top: 0;">The Transformation</h3>
+            <div class="flow-diagram">
+                <div class="flow-box">Traditional View:<br>"Resistance"<br>"Lack of Motivation"</div>
+                <div class="arrow">→</div>
+                <div class="flow-box">Buddhist Reframe:<br>"Self-Story Addiction"<br>"Identity Investment"</div>
+                <div class="arrow">→</div>
+                <div class="flow-box">Clinical Response:<br>"Progressive Liberation"<br>"Skillful Means"</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <h2>Main Point 2: Theoretical Components</h2>
+        <p class="main-concept">Three Buddhist principles organize Western evidence-based practice</p>
+    </div>
+
+    <div class="content-box">
+        <div class="sub-section">
+            <h3>2.1 Buddhist Motivation (Bodhicitta)</h3>
+            
+            <div class="definition-box">
+                <strong>Definition:</strong> Bodhicitta means the aspiration to liberate all beings from suffering.
+            </div>
+
+            <p><strong>Translation for Secular Practice:</strong> The recognition that all people want to be happy</p>
+
+            <div class="key-insight">
+                <strong>Clinical Impact:</strong> This reframes therapeutic work as labor toward client liberation rather than ego achievement, preventing burnout by treating clinical work as spiritual practice rather than mere employment.
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>2.2 Strategic Skillfulness (Upaya)</h3>
+            
+            <p><strong>The Traditional Synthesis: MI and TTM</strong></p>
+            
+            <div class="diagram">
+                <h4 style="color: #2c5f2d;">Traditional Therapeutic Integration</h4>
+                <div class="grid-diagram">
+                    <div class="grid-item">
+                        <h4>Motivational Interviewing (MI)</h4>
+                        <ul>
+                            <li>Emerged from William Miller's work with problem drinkers (1980s)</li>
+                            <li>Resolves ambivalence without confrontation</li>
+                            <li>Clients possess both reasons to change AND reasons to stay the same</li>
+                            <li>Strategic questioning and reflective listening</li>
+                            <li><strong>Key Technique:</strong> Roll with resistance, don't push</li>
+                        </ul>
+                    </div>
+                    <div class="grid-item">
+                        <h4>Transtheoretical Model (TTM)</h4>
+                        <ul>
+                            <li>Developed by Prochaska & DiClemente studying smokers</li>
+                            <li>Maps the process people move through when changing</li>
+                            <li><strong>Five Stages:</strong> Precontemplation → Contemplation → Preparation → Action → Maintenance</li>
+                            <li><strong>Crucial Insight:</strong> Different stages need different interventions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; font-size: 1.2em; color: #4a9d4e; margin: 20px 0;">
+                    <strong>TTM provides the MAP of where the client is<br>
+                    <span class="dialectical-arrow">⟷</span><br>
+                    MI provides the VEHICLE for moving along that journey</strong>
+                </p>
+            </div>
+
+            <div class="example-box">
+                <strong>How the Traditional Synthesis Works:</strong>
+                <ol>
+                    <li>Therapist assesses which stage the client occupies (TTM)</li>
+                    <li>Uses MI techniques appropriate to that stage:
+                        <ul>
+                            <li>Building awareness in precontemplation</li>
+                            <li>Exploring ambivalence in contemplation</li>
+                            <li>Supporting commitment in preparation</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>2.2.1 Adding Common Factors Research</h3>
+            
+            <div class="definition-box">
+                <strong>Common Factors:</strong> What actually produces therapeutic outcomes across all approaches regardless of theoretical orientation.
+            </div>
+
+            <div class="grid-diagram">
+                <div class="grid-item">
+                    <h4>The Research Shows:</h4>
+                    <ul>
+                        <li>Relationship quality</li>
+                        <li>Client expectations</li>
+                        <li>Therapist empathy</li>
+                        <li>Hope mobilization</li>
+                    </ul>
+                    <p><strong>These account for MORE variance in outcomes than any specific technique</strong></p>
+                </div>
+                <div class="grid-item">
+                    <h4>Why They Work:</h4>
+                    <p>They provide the <strong>relational conditions</strong> under which change becomes possible</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>2.2.2 The Anti-Self Reframe: From Behavior to Identity</h3>
+            
+            <div class="key-insight">
+                <strong>The Core Buddhist Insight:</strong> Drawing on anatta (no-self in Pali)—the recognition that what we experience as a fixed, continuous self is actually a constructed narrative.
+            </div>
+
+            <div class="diagram">
+                <h4 style="color: #2c5f2d;">The Paradigm Shift</h4>
+                <table>
+                    <tr>
+                        <th>TTM Stage</th>
+                        <th>Traditional View</th>
+                        <th>Anti-Self Reframe</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Precontemplation</strong></td>
+                        <td>"Not ready to change behavior"</td>
+                        <td><strong>Deep investment in self-story through the symptom</strong><br>
+                        The anorexic isn't just "not ready to eat more"—she's invested in being "the disciplined one," "the one who doesn't need anything," "the one who has control"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contemplation</strong></td>
+                        <td>"Thinking about change"</td>
+                        <td><strong>Recognition of that investment's cost</strong><br>
+                        "I'm starting to see that being 'the disciplined one' means I can't connect with anyone, can't feel pleasure, can't actually live"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Action</strong></td>
+                        <td>"Actively changing behavior"</td>
+                        <td><strong>Active deconstruction of old self-narrative</strong><br>
+                        Not just behavior change but identity transformation. Recovery means giving up "I am an anorexic" and discovering who exists without that organizing story</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="warning-box">
+                <strong>Why This Terrifies People:</strong> This process threatens the coherence of self. The Buddhist insight: liberation comes not from replacing a bad self-story with a good one, but from loosening the grip of needing any fixed self-story at all.
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>2.2.3 Clinical Implications: How This Changes Practice</h3>
+            
+            <div class="example-box">
+                <strong>Traditional MI Approach:</strong><br>
+                Client: "I know I should eat more but I can't"<br>
+                Therapist: "Part of you wants to recover"
+            </div>
+
+            <div class="example-box">
+                <strong>Anti-Self MI Approach:</strong><br>
+                Client: "I know I should eat more but I can't"<br>
+                Therapist: "It sounds like part of you isn't sure who you'd be without the anorexia"<br>
+                <strong>→ The intervention targets the self-story, not just the symptom</strong>
+            </div>
+
+            <div class="key-insight">
+                <strong>Why Common Factors Work in This Framework:</strong>
+                <ul>
+                    <li><strong>Empathy</strong> provides the safety to examine painful truths about how the self-story fails</li>
+                    <li><strong>Hope mobilization</strong> makes it imaginable that life without the familiar identity might actually work</li>
+                    <li><strong>The therapeutic relationship</strong> becomes the secure base from which clients can venture into the unknown territory of not-knowing-who-they-are</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>2.3 Psychodynamic Realism</h3>
+            
+            <div class="warning-box">
+                <strong>Prevents Spiritual Bypassing:</strong> The framework attends to conflicted motivations and shadow material, recognizing that:
+                <ul>
+                    <li>Meditation practice can serve neurosis</li>
+                    <li>Confession can become performance</li>
+                    <li><strong>Requires work THROUGH psychological obstacles rather than transcendence of them</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>2.4 Metta Practice Intervention</h3>
+            
+            <div class="definition-box">
+                <strong>Core Clinical Intervention:</strong> Felt-sense metta practice drawing on energy body work and heart coherence cultivation
+            </div>
+
+            <div class="diagram">
+                <h4 style="color: #2c5f2d;">Systematic Extension of Loving-Kindness</h4>
+                <div class="flow-diagram" style="flex-direction: column;">
+                    <div class="flow-box" style="width: 100%;">Self</div>
+                    <div class="arrow" style="transform: rotate(90deg);">→</div>
+                    <div class="flow-box" style="width: 100%;">Close Others</div>
+                    <div class="arrow" style="transform: rotate(90deg);">→</div>
+                    <div class="flow-box" style="width: 100%;">Neutral Others</div>
+                    <div class="arrow" style="transform: rotate(90deg);">→</div>
+                    <div class="flow-box" style="width: 100%;">Difficult Others</div>
+                    <div class="arrow" style="transform: rotate(90deg);">→</div>
+                    <div class="flow-box" style="width: 100%;">All Beings</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <h2>Main Point 3: Clinical Assessment</h2>
+        <p class="main-concept">Three dimensions that, when aligned, facilitate forward movement; when misaligned, require therapeutic adjustment</p>
+    </div>
+
+    <div class="content-box">
+        <div class="diagram">
+            <h3 style="color: #2c5f2d; margin-top: 0;">The Three-Dimensional Assessment Model</h3>
+            <div class="grid-diagram">
+                <div class="grid-item">
+                    <h4>1. Insight Level (1-4)</h4>
+                    <table>
+                        <tr>
+                            <th>Level</th>
+                            <th>Description</th>
+                            <th>Clinical Response</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>No awareness of problem<br>Symptom experienced as solution</td>
+                            <td>Relationship-building & psychoeducation</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Intellectual understanding without behavioral change</td>
+                            <td>Values clarification</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Visceral feeling of suffering<br>Internal motivation emerging</td>
+                            <td>Skill-building support</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Sustained understanding maintained over time</td>
+                            <td>Relapse prevention & community integration</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>3.1 Psychological Obstacles</h3>
+            
+            <p><strong>What blocks change:</strong></p>
+            <ul>
+                <li>Trauma</li>
+                <li>Shame</li>
+                <li>Identity investment</li>
+                <li>Relational patterns</li>
+            </ul>
+
+            <div class="key-insight">
+                <strong>Critical Principle:</strong> All obstacles require specific attention BEFORE behavioral change becomes possible
+            </div>
+
+            <div class="example-box">
+                <strong>Assessment-Intervention Matching:</strong>
+                <ul>
+                    <li>Client with <strong>high insight</strong> but <strong>severe trauma</strong> → Needs trauma work, not behavioral activation</li>
+                    <li>Client with <strong>low insight</strong> but <strong>high momentum</strong> → Needs relationship-building, not confrontation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>3.2 Behavioral Momentum</h3>
+            
+            <div class="definition-box">
+                <strong>Tracks:</strong> Actual change attempts from thinking about change → testing small experiments → sustained new patterns
+            </div>
+
+            <p><strong>Purpose:</strong> Provides concrete evidence of readiness that complements the insight assessment</p>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <h2>Main Point 4: Working with Guilt</h2>
+        <p class="main-concept">Distinguishing neurotic from reparative guilt to guide therapeutic intervention</p>
+    </div>
+
+    <div class="content-box">
+        <div class="sub-section">
+            <h3>4.1 Types of Guilt</h3>
+            
+            <table>
+                <tr>
+                    <th>Guilt Type</th>
+                    <th>Characteristics</th>
+                    <th>Therapeutic Function</th>
+                </tr>
+                <tr>
+                    <td><strong>Neurotic Guilt</strong></td>
+                    <td>
+                        <ul>
+                            <li>Excessive, punishing self-criticism</li>
+                            <li>Disconnected from actual harm caused</li>
+                            <li>Serves to stabilize identity ("I'm a bad person")</li>
+                            <li>Prevents change by maintaining self-story</li>
+                        </ul>
+                    </td>
+                    <td>Requires compassionate inquiry into what the guilt protects against</td>
+                </tr>
+                <tr>
+                    <td><strong>Reparative Guilt</strong></td>
+                    <td>
+                        <ul>
+                            <li>Proportional to harm caused</li>
+                            <li>Motivates repair and amends</li>
+                            <li>Allows for learning and change</li>
+                            <li>Diminishes after appropriate response</li>
+                        </ul>
+                    </td>
+                    <td>Can be channeled toward constructive action and integration</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="sub-section">
+            <h3>4.2 Buddhist-Informed Approach: The Four Powers</h3>
+            
+            <div class="definition-box">
+                <strong>When Guilt is Reparative:</strong> The Four Powers teaching offers a gentle structure for moving through acknowledgment toward freedom
+            </div>
+
+            <div class="diagram">
+                <div class="grid-diagram">
+                    <div class="grid-item">
+                        <h4>Recognition</h4>
+                        <p>Seeing clearly what happened without dramatization or minimization</p>
+                    </div>
+                    <div class="grid-item">
+                        <h4>Remorse</h4>
+                        <p>Feeling appropriate sadness about harm caused—neither self-attack nor dismissal</p>
+                    </div>
+                    <div class="grid-item">
+                        <h4>Repair</h4>
+                        <p>Making amends where possible, accepting limitations where not</p>
+                    </div>
+                    <div class="grid-item">
+                        <h4>Release</h4>
+                        <p>Committing to learn without requiring perfection, allowing the past to be past</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-insight">
+                <strong>Clinical Distinction:</strong> This process works only when guilt is reparative. Neurotic guilt requires different work—exploring what identity or relational pattern the guilt maintains rather than moving toward repair.
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>4.3 Clinical Patterns to Notice</h3>
+            
+            <div class="example-box">
+                <strong>Confession as Compulsion:</strong> When clients repeatedly confess the same transgression without change, guilt may be serving as a permission structure ("I've confessed, so now I can do it again") or as identity stabilization ("I'm the person who struggles with this").
+                
+                <p><strong>Therapeutic Response:</strong> Gentle curiosity about what function the pattern serves rather than moral evaluation</p>
+            </div>
+
+            <div class="example-box">
+                <strong>Guilt as Protection:</strong> Sometimes excessive guilt protects against a more frightening emotion—like rage, grief, or the vulnerability of actually being affected by something.
+                
+                <p><strong>Therapeutic Response:</strong> Explore what might emerge if the guilt softened</p>
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>4.4 Assessment Considerations</h3>
+            
+            <table>
+                <tr>
+                    <th>Harm Type</th>
+                    <th>Description</th>
+                    <th>Therapeutic Focus</th>
+                </tr>
+                <tr>
+                    <td><strong>Natural Harm</strong></td>
+                    <td>Actions with inherent consequences (e.g., breaking someone's trust)</td>
+                    <td>Understanding impact and learning from consequences</td>
+                </tr>
+                <tr>
+                    <td><strong>Rule Transgression</strong></td>
+                    <td>Breaking an internal or external rule/commitment</td>
+                    <td>Examining whether the rule itself serves the person's actual values or represents internalized shoulds</td>
+                </tr>
+            </table>
+
+            <div class="key-insight">
+                <strong>The Question:</strong> Is the client guilty about actual harm caused, or guilty about failing to live up to an internalized (perhaps punishing) standard? The therapeutic approach differs significantly.
+            </div>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <h2>Main Point 5: Clinical Advantages</h2>
+        <p class="main-concept">How the framework benefits both therapists and clients</p>
+    </div>
+
+    <div class="content-box">
+        <div class="sub-section">
+            <h3>5.1 Therapist Sustainability</h3>
+            
+            <div class="key-insight">
+                <strong>The Problem:</strong> Evidence-based practice manuals rarely address practitioner sustainability
+            </div>
+
+            <div class="diagram">
+                <h4 style="color: #2c5f2d;">Two Sustainability Mechanisms</h4>
+                <div class="grid-diagram">
+                    <div class="grid-item">
+                        <h4>Mechanism 1: Bodhicitta Motivation</h4>
+                        <p>Reframes work as <strong>practice</strong> rather than job</p>
+                    </div>
+                    <div class="grid-item">
+                        <h4>Mechanism 2: Realistic Assessment</h4>
+                        <p>Prevents the fantasy that clients should change faster than they actually do</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>5.2 Client Outcomes</h3>
+            
+            <div class="example-box">
+                <strong>The framework offers:</strong>
+                <ul>
+                    <li>Philosophical sophistication without contradicting evidence-based interventions</li>
+                    <li>Reframes recovery as <strong>learning</strong> rather than disease management</li>
+                    <li>Symptoms as expressions of <strong>ignorance</strong> rather than pathology requiring a cure</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sub-section">
+            <h3>5.3 Professional Legitimacy</h3>
+            
+            <div class="key-insight">
+                <strong>How it maintains credibility:</strong> Organizes established interventions (MI, Stages of Change, common factors) within Buddhist categories rather than importing Buddhist techniques without a Western therapeutic foundation
+                
+                <p><strong>Result:</strong> Preserves evidence-based credibility while adding philosophical depth</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <h2>Main Point 6: Implementation Status</h2>
+        <p class="main-concept">Living framework in active development</p>
+    </div>
+
+    <div class="content-box">
+        <div class="implementation-status">
+            <p><strong>Framework Origin:</strong> Emerged in October 2025 through synthesis of Buddhist study with clinical training</p>
+            
+            <p><strong>Maintenance System:</strong> "Command Center" document that preserves core structure while accumulating clinical learnings from actual practice</p>
+            
+            <h4>Version 1.5 Study Integrations:</h4>
+            <ol>
+                <li>Four Powers teaching on confession</li>
+                <li>Negative action categories for assessment precision</li>
+                <li>Canonical Buddhist terms for theoretical grounding</li>
+                <li>Rejoicing and dedication practices for therapist sustainability</li>
+                <li>Metta foundations for intervention theory</li>
+            </ol>
+
+            <p><strong>Current Application:</strong> Working with eating disorder populations while tracking what works, what doesn't, and why</p>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <h2>Main Point 7: Unanswered Questions</h2>
+        <p class="main-concept">Areas requiring further investigation</p>
+    </div>
+
+    <div class="content-box">
+        <div class="warning-box">
+            <strong>Open Questions:</strong>
+            <ul>
+                <li>Does negative action type assessment change intervention choices?</li>
+                <li>Does the witnessing stance prove therapeutically powerful or alienating?</li>
+                <li>Does rejoicing practice work with self-critical eating disorder clients without devolving into toxic positivity?</li>
+            </ul>
+        </div>
+
+        <div class="key-insight">
+            <strong>Testing Strategy:</strong> Framework stays in active testing through ongoing integration of:
+            <ul>
+                <li>Buddhist study</li>
+                <li>Clinical practice</li>
+                <li>Systematic documentation of learnings</li>
+            </ul>
+            <p>Maintains foundation integrity while allowing branches to grow from actual clinical experience</p>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <h2>Conclusion</h2>
+        <p class="main-concept">Making explicit what many therapists do implicitly</p>
+    </div>
+
+    <div class="content-box">
+        <div class="key-insight">
+            <strong>What Upaya Counseling Does:</strong>
+            <ul>
+                <li>Matches intervention to readiness</li>
+                <li>Attends to psychological obstacles</li>
+                <li>Works for client liberation rather than symptom reduction</li>
+            </ul>
+        </div>
+
+        <div class="diagram">
+            <h3 style="color: #2c5f2d; margin-top: 0;">The Integration</h3>
+            <div class="grid-diagram">
+                <div class="grid-item">
+                    <h4>Buddhist Framework</h4>
+                    <p>→ Theoretical sophistication</p>
+                </div>
+                <div class="grid-item">
+                    <h4>Evidence-Based Interventions</h4>
+                    <p>→ Clinical legitimacy</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 20px; font-size: 1.2em;">
+                <strong>Together → Addresses both therapist sustainability AND client outcomes</strong>
+            </p>
+        </div>
+
+        <div class="example-box">
+            <strong>Design Philosophy:</strong> The structure tracks <strong>real-world results</strong> rather than theoretical elegance
+        </div>
+    </div>
+
+    <div class="reference-box">
+        <h3>References</h3>
+        <p>Miller, W. R., & Rollnick, S. (2013). <em>Motivational interviewing: Helping people change</em> (3rd ed.). Guilford Press.</p>
+        <p>Prochaska, J. O., & DiClemente, C. C. (1983). Stages and processes of self-change of smoking: Toward an integrative model of change. <em>Journal of Consulting and Clinical Psychology, 51</em>(3), 390-395.</p>
+    </div>
+
+</body>
+</html>
